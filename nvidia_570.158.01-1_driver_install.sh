@@ -7,4 +7,11 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cu
 
 # PS.: Ficar de olho pra ver quando vai aparecer o repositório para debian13
 
+sleep 3
+
+echo "blacklist r8169" | sudo tee /etc/modprobe.d/r8169-disable.conf && sudo update-initramfs -u -k all
+
+#echo "install r8169 /bin/false" | sudo tee /etc/modprobe.d/r8169-disable.conf && update-initramfs -u -k all
+
+#echo -e "blacklist r8169\ninstall r8169 /bin/false" | sudo tee /etc/modprobe.d/r8169-disable.conf && sudo update-initramfs -u -k all
 
