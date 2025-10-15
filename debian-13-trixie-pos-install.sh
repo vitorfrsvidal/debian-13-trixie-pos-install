@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update && apt install build-essential vim gedit lm-sensors psensor gparted smartmontools kolourpaint linux-headers-amd64 easyeffects rsync gnome-shell-extension-manager auditd audispd-plugins
+apt update && apt install build-essential vim gedit lm-sensors psensor gparted smartmontools kolourpaint linux-headers-amd64 easyeffects rsync gnome-shell-extension-manager auditd audispd-plugins git
 
 # PS.: Ficar de olho para ver quando vai aparecer o repositorio debian13 com os drivers da nvidia
 sleep 3
