@@ -21,6 +21,15 @@ apt update && apt install -t trixie-backports linux-image-amd64 linux-headers-am
 
 # ------------------------------------------------------------------------------------------------------
 
+
+# Instalar ferramenta para GPU
+
+sleep 3
+apt update && apt install mesa-utils && echo "mesa-utils instalado!" || exit 1
+
+
+# ------------------------------------------------------------------------------------------------------
+
 # Instalar o driver r8125 e blacklistar o driver r8169
 
 
