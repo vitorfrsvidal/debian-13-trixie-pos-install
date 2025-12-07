@@ -2,9 +2,9 @@
 
 apt update && apt install build-essential vim gedit lm-sensors psensor gparted smartmontools kolourpaint linux-headers-amd64 easyeffects rsync gnome-shell-extension-manager auditd audispd-plugins git
 
-# PS.: Ficar de olho para ver quando vai aparecer o repositorio debian13 com os drivers da nvidia
+# PS.: Sempre observar se surgem novos repositorios (URL abaixo) que sao compativeis com a versao da distribuicao em uso
 sleep 3
-wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb && dpkg -i cuda-keyring_1.1-1_all.deb && apt update && apt install nvidia-open && echo "driver nvidia-open instalado!" || exit 1
+wget https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64/cuda-keyring_1.1-1_all.deb && dpkg -i cuda-keyring_1.1-1_all.deb && apt update && apt install nvidia-open && echo "driver nvidia-open instalado!" || exit 1
 
 #sleep 3
 #apt update && apt install cuda-toolkit && echo "cuda-toolkit instalado!" || exit 1
@@ -25,7 +25,7 @@ apt update && apt install -t trixie-backports linux-image-amd64 linux-headers-am
 # Instalar ferramenta para GPU
 
 sleep 3
-apt update && apt install mesa-utils && echo "mesa-utils instalado!" || exit 1
+apt update && apt install mesa-utils && apt upgrade echo "mesa-utils instalado!" || exit 1
 
 
 # ------------------------------------------------------------------------------------------------------
